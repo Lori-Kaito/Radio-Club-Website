@@ -8,7 +8,6 @@ body {
     color: #f4f4f4;
 }
 
-/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -16,7 +15,6 @@ body {
     text-align: center;
 }
 
-/* Header */
 header {
     background: rgba(44, 62, 80, 0.9); /* Semi-transparent header */
     color: #fff;
@@ -68,7 +66,6 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Sections */
 .section {
     padding: 50px 20px;
     background: rgba(255, 255, 255, 0.15);
@@ -76,15 +73,25 @@ nav ul li a:hover {
     margin: 20px auto;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 80%;
+    width: 80%; /* Adjusted width */
+    max-width: 600px; /* Maximum width */
 }
 
-/* Alternating section colors */
 .section:nth-child(even) {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Footer */
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.column {
+    width: 48%;
+}
+
 footer {
     background: rgba(44, 62, 80, 0.9);
     color: #fff;
@@ -93,7 +100,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5rem;
@@ -112,5 +118,40 @@ footer {
     .section {
         width: 90%;
         padding: 40px 15px;
+        max-width: none; /* Remove max-width for smaller screens */
     }
+
+    .two-column {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.email-icon, .address-icon, .clock-icon {
+    width: 20px; /* Adjust the width as needed */
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin: 10px 0;
 }
