@@ -66,10 +66,16 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
+.main-content {
+    background: url('bg.png') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 20px;
+}
+
 .section {
     padding: 50px 20px;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px); /* Glassmorphism effect */
+    backdrop-filter: blur(0.1px); /* Glassmorphism effect */
     margin: 20px auto;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -140,8 +146,15 @@ a:hover {
     text-decoration: underline;
 }
 
-.email-icon, .address-icon, .clock-icon {
-    width: 20px; /* Adjust the width as needed */
+.email-icon, .address-icon, .clock-icon, .facebook-icon {
+    width: 40px; /* Adjust the width as needed */
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.phone-icon {
+    width: 33px; /* Adjust the width as needed */
     height: auto;
     vertical-align: middle;
     margin-right: 8px;
@@ -154,4 +167,42 @@ a:hover {
 
 #contact ul li {
     margin: 10px 0;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Image styles */
+.mySlides img {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 350px; /* Set a maximum height */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }

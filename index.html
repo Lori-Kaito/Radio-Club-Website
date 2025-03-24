@@ -14,19 +14,19 @@
             <h1>DX1ARC - Amateur Radio Communications of the Philippines Inc.</h1>
             <nav>
                 <ul>
-                    <!-- <li><a href="#gallery">Gallery</a></li> -->
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#gallery"> Gallery</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <div class="main-content">
     <div class="two-column">
         <section id="about" class="section column">
             <div class="container">
                 <h2>About Us</h2>
-                <p>Welcome to the Radio Amateur Club! We are a community of radio enthusiasts who share a passion for amateur radio, communication, and learning. Join us to explore, connect, and grow together.</p>
-                <p>The Amateur Radio Communications of the Philippines, Incorporated is an amateur radio club based in the Philippines with the callsign, DX1ARC</p>
+                <p>The Amateur Radio Communications of the Philippines, Incorporated is an amateur radio club based in the Philippines with the callsign, DX1ARC.</p>
                 <p>Our home frequencies are at 144.760Hz and 431.950MHz.</p>
             </div>
         </section>
@@ -48,24 +48,41 @@
             <p>Monday to Saturday</p>
             <p>
                 <a href="https://www.worldtimebuddy.com/?pl=1&lid=1701668,100&h=1701668&hf=1" target="_blank">
-                    1200hrs UTC
+                    1200HRS UTC
                 </a>
             </p>
         </div>
     </section>
 
-    <!--
     <section id="gallery" class="section">
         <div class="container">
             <h2>Gallery</h2>
-            <p>Check out photos from our past events and activities!</p>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="gallery/1.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="gallery/2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="gallery/3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="gallery/4.jpg" style="width:100%">
+                </div>
+            </div>
         </div>
     </section>
--->
+
     <section id="contact" class="section">
         <div class="container">
-            <h2>Contact Us</h2>
+            <h2><img src="circle.png" alt="Phone Icon" class="phone-icon">Contact Us <img src="circle.png" alt="Phone Icon" class="phone-icon"></h2>
             <ul>
+                <li>
+                    <a href="https://www.facebook.com/DX1ARC" target="_blank">
+                        <img src="facebook.png" alt="Facebook Icon" class="facebook-icon"> DX1ARC FB Page
+                    </a>
+                </li>
                 <li>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dx1arc@gmail.com" target="_blank">
                         <img src="mail.png" alt="Email Icon" class="email-icon"> dx1arc@gmail.com
@@ -79,11 +96,29 @@
             </ul>
         </div>
     </section>
+</div>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Radio Amateur Club. All rights reserved.</p>
+            <p>&copy; 2025 DX1ARC Radio Amateur Club. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
 </body>
 </html>
