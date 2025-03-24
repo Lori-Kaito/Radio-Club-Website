@@ -5,7 +5,7 @@ body {
     padding: 0;
     line-height: 1.6;
     background: linear-gradient(to right, #1e3c72, #2a5298); /* Modern gradient */
-    color: #f4f4f4;
+    color: #f4f4f4; /* Ensure text color is white */
 }
 
 .container {
@@ -13,6 +13,7 @@ body {
     max-width: 1200px;
     margin: auto;
     text-align: center;
+    color: #f4f4f4; /* Ensure text color is white */
 }
 
 header {
@@ -70,6 +71,8 @@ nav ul li a:hover {
     background: url('bg.png') no-repeat center center fixed;
     background-size: cover;
     padding-top: 20px;
+    color: #f4f4f4; /* Ensure text color is white */
+    min-height: 100vh; /* Ensure the main content takes up at least the full height of the viewport */
 }
 
 .section {
@@ -81,6 +84,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 80%; /* Adjusted width */
     max-width: 600px; /* Maximum width */
+    color: #f4f4f4; /* Ensure text color is white */
 }
 
 .section:nth-child(even) {
@@ -137,6 +141,24 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 30px 10px;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .mySlides img {
+        max-height: 300px; /* Adjust the maximum height for smaller screens */
+    }
+}
+
 a {
     color: #f4f4f4;
     text-decoration: none;
@@ -185,7 +207,7 @@ a:hover {
 .mySlides img {
     width: 100%; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
-    max-height: 350px; /* Set a maximum height */
+    max-height: 500px; /* Set a maximum height */
     object-fit: cover; /* Ensure the image covers the container */
 }
 
