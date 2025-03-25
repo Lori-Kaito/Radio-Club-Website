@@ -30,15 +30,22 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-header h1 {
-    font-size: 1.8rem;
-    margin: 0;
+.header-text {
+    text-align: center; /* Center-align the text */
+    flex: 1; /* Allow the text to take up available space */
+}
+
+header h2 {
+    font-size: 1.9rem; /* Adjust the font size as needed */
+    color: #f4f4f4; /* Ensure the text color matches the header */
+    margin-top: 0.5rem; /* Add some spacing between the h1 and h2 */
 }
 
 header .header-image {
-    width: 100px; /* Adjust the width as needed */
+    width: 150px; /* Adjust the width as needed */
     height: auto;
 }
 
@@ -48,6 +55,7 @@ nav ul {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    font-size: 15px;
 }
 
 nav ul li {
