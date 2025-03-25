@@ -22,7 +22,7 @@ header {
     padding: 1.5rem 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     display: flex;
-    align-items: center;
+    align-items: right;
     justify-content: space-between;
 }
 
@@ -39,7 +39,7 @@ header .container {
 }
 
 header h2 {
-    font-size: 1.9rem; /* Adjust the font size as needed */
+    font-size: 2.3rem; /* Adjust the font size as needed */
     color: #f4f4f4; /* Ensure the text color matches the header */
     margin-top: 0.5rem; /* Add some spacing between the h1 and h2 */
 }
