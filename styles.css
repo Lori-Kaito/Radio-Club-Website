@@ -236,3 +236,77 @@ a:hover {
     from {opacity: .4} 
     to {opacity: 1}
 }
+
+.logo-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between logos */
+    margin: 20px 0;
+}
+
+.logo-divider img {
+    width: 42px;
+    height: auto;
+    animation: wave 2s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+/* Apply a delay to each logo to create the wave effect */
+.logo-divider img:nth-child(1) {
+    animation-delay: 0s;
+}
+.logo-divider img:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.logo-divider img:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.logo-divider img:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.logo-divider img:nth-child(5) {
+    animation-delay: 0.8s;
+}
+.logo-divider img:nth-child(6) {
+    animation-delay: 1s;
+}
+.logo-divider img:nth-child(7) {
+    animation-delay: 1.2s;
+}
+.logo-divider img:nth-child(8) {
+    animation-delay: 1.4s;
+}
+.logo-divider img:nth-child(9) {
+    animation-delay: 1.6s;
+}
+.logo-divider img:nth-child(10) {
+    animation-delay: 1.8s;
+}
+.logo-divider img:nth-child(11) {
+    animation-delay: 2s;
+}
+
+/* Wave animation */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+}
+
+#core-values ul {
+    list-style-type: disc; /* Keep the bullet points */
+    margin-left: 20px; /* Add some indentation */
+    padding-left: 0;
+}
+
+#core-values ul li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    line-height: 1.6; /* Improve readability */
+    text-indent: 0;
+}
