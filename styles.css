@@ -4,8 +4,10 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: linear-gradient(to right, #1e3c72, #2a5298); /* Modern gradient */
+    background: url('bg.png'); /* Modern gradient */
     color: #f4f4f4; /* Ensure text color is white */
+    background-size: cover; /* Cover the entire background */
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
 }
 
 .container {
@@ -95,19 +97,15 @@ nav ul li a:hover {
     color: #f4f4f4; /* Ensure text color is white */
 }
 
+.section h2 {
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+    font-size: 2rem; /* Optional: Adjust the font size */
+    color: #f4f4f4; /* Ensure the text color matches the design */
+}
+
 .section:nth-child(even) {
     background: rgba(255, 255, 255, 0.1);
-}
-
-.two-column {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.column {
-    width: 48%;
 }
 
 footer {
@@ -138,15 +136,6 @@ footer {
         padding: 40px 15px;
         max-width: none; /* Remove max-width for smaller screens */
     }
-
-    .two-column {
-        flex-direction: column;
-    }
-
-    .column {
-        width: 100%;
-        margin-bottom: 20px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -164,6 +153,13 @@ footer {
 
     .mySlides img {
         max-height: 300px; /* Adjust the maximum height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjusts the image to fit smaller screens */
+        background-attachment: scroll; /* Prevents the fixed background from causing issues on mobile */
     }
 }
 
@@ -241,15 +237,15 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Space between logos */
+    gap: 50px; /* Space between logos */
     margin: 20px 0;
+    opacity: 0.6;
 }
 
 .logo-divider img {
     width: 42px;
     height: auto;
-    animation: wave 2s ease-in-out infinite;
-    opacity: 0.8;
+    animation: wave 6s ease-in-out infinite;
 }
 
 /* Apply a delay to each logo to create the wave effect */
@@ -267,24 +263,6 @@ a:hover {
 }
 .logo-divider img:nth-child(5) {
     animation-delay: 0.8s;
-}
-.logo-divider img:nth-child(6) {
-    animation-delay: 1s;
-}
-.logo-divider img:nth-child(7) {
-    animation-delay: 1.2s;
-}
-.logo-divider img:nth-child(8) {
-    animation-delay: 1.4s;
-}
-.logo-divider img:nth-child(9) {
-    animation-delay: 1.6s;
-}
-.logo-divider img:nth-child(10) {
-    animation-delay: 1.8s;
-}
-.logo-divider img:nth-child(11) {
-    animation-delay: 2s;
 }
 
 /* Wave animation */
@@ -309,4 +287,66 @@ a:hover {
     margin-bottom: 10px; /* Add spacing between list items */
     line-height: 1.6; /* Improve readability */
     text-indent: 0;
+}
+
+.highlight {
+    font-size: 1.5rem; /* Increase the font size */
+    color: #f4f4f4; /* Optional: Adjust the color */
+}
+
+.highlight2 {
+    font-size: 1rem; /* Increase the font size */
+    color: #f4f4f4; /* Optional: Adjust the color */
+    font-weight: 700;
+}
+
+.net-schedule-header {
+    display: flex;
+    align-items: center; /* Align the text and GIF vertically */
+    justify-content: center; /* Center the content horizontally */
+    gap: 10px; /* Add spacing between the text and the GIF */
+}
+
+.net-schedule-header h2 {
+    font-size: 2rem; /* Adjust the font size of the text */
+    margin: 0; /* Remove default margins */
+}
+
+.satellite-icon {
+    width: auto; /* Automatically adjust width */
+    height: 4rem; /* Match the height of the text */
+}
+
+.events-header {
+    display: flex;
+    align-items: center; /* Align the text and GIF vertically */
+    justify-content: center; /* Center the content horizontally */
+    gap: 10px; /* Add spacing between the text and the GIF */
+}
+
+.events-header h2 {
+    font-size: 2rem; /* Adjust the font size of the text */
+    margin: 0; /* Remove default margins */
+}
+
+.events-icon {
+    width: auto; /* Automatically adjust width */
+    height: 4rem; /* Match the height of the text */
+}
+
+.gallery-header {
+    display: flex;
+    align-items: center; /* Align the text and GIF vertically */
+    justify-content: center; /* Center the content horizontally */
+    gap: 10px; /* Add spacing between the text and the GIF */
+}
+
+.gallery-header h2 {
+    font-size: 2rem; /* Adjust the font size of the text */
+    margin: 0; /* Remove default margins */
+}
+
+.gallery-icon {
+    width: auto; /* Automatically adjust width */
+    height: 4rem; /* Match the height of the text */
 }
