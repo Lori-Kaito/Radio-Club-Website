@@ -350,3 +350,25 @@ a:hover {
     width: auto; /* Automatically adjust width */
     height: 4rem; /* Match the height of the text */
 }
+
+.gallery2-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icons and title */
+}
+
+.gallery2-header h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.slideshow-container img,
+#slideshow-container img,
+#slideshow-container2 img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
