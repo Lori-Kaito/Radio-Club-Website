@@ -372,3 +372,29 @@ a:hover {
     display: block;
     margin: 0 auto;
 }
+
+.events-image-fit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    background: none;
+    padding: 0;
+}
+
+.events-image-fit img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.events-image-fit p {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    position: static;
+    float: none;
+}
