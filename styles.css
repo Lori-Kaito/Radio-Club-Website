@@ -398,3 +398,15 @@ a:hover {
     position: static;
     float: none;
 }
+
+.raffle-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #f4f4f4;
+}
+.raffle-link:hover {
+    color: #0c2cbb;
+}
