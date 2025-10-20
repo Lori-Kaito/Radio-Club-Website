@@ -95,6 +95,49 @@ function showSlides2() {
     setTimeout(showSlides2, 4000);
 }
 showSlides2();
+
+// Gallery 3 (JOTA-JOTI 2025) images array
+const images3 = [
+    "1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg",
+    "10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg",
+    "19.jpg","20.jpg","21.jpg","22.jpg","23.jpg","24.jpg","25.jpg","26.jpg","27.jpg",
+    "28.jpg","29.jpg","30.jpg","31.jpg","32.jpg","33.jpg","34.jpg","35.jpg","36.jpg","37.jpg","38.jpg"
+];
+
+// Shuffle Gallery 3 images
+function shuffle3(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+shuffle3(images3);
+
+// Dynamically create slides for Gallery 3
+const slideshowContainer3 = document.getElementById("slideshow-container3");
+images3.forEach((img, idx) => {
+    const slideDiv = document.createElement("div");
+    slideDiv.className = "mySlides3 fade";
+    const image = document.createElement("img");
+    image.src = "gallery3/" + img;
+    image.style.width = idx === 0 ? "80%" : "100%";
+    slideDiv.appendChild(image);
+    slideshowContainer3.appendChild(slideDiv);
+});
+
+// Slideshow logic for Gallery 3
+let slideIndex3 = 0;
+function showSlides3() {
+    let slides3 = document.getElementsByClassName("mySlides3");
+    for (let i = 0; i < slides3.length; i++) {
+        slides3[i].style.display = "none";
+    }
+    slideIndex3++;
+    if (slideIndex3 > slides3.length) {slideIndex3 = 1}
+    slides3[slideIndex3-1].style.display = "block";
+    setTimeout(showSlides3, 4000);
+}
+showSlides3();
 };
 </script>
 
@@ -239,10 +282,6 @@ showSlides2();
                     <b><u>Click here for the raffle mechanics</u></b>
                     </a>
                 </p>
-                <!-- Temporary Photo Segment (Remove on Sunday) -->
-                <div style="text-align:center; margin-top:15px;">
-                    <img src="events/temp-photo.jpg" alt="Temporary Event Photo" style="max-width:90%;height:auto;">
-                </div>
                 </div>
             </div>
             <div class="logo-divider">
@@ -286,7 +325,7 @@ showSlides2();
             <img src="DX1ARC_logo.png" alt="DX1ARC Logo">
         </div>
 
-        <!-- New JOTA-JOTI 2025 Gallery Segment -->
+        <!-- JOTA-JOTI 2025 Gallery Segment -->
         <section id="jota-joti" class="section">
             <div class="container">
                 <div class="gallery-header">
@@ -294,8 +333,8 @@ showSlides2();
                     <h2>JOTA-JOTI 2025</h2>
                     <img src="camera.gif" alt="Camera Icon" class="gallery-icon">
                 </div>
-                <div class="single-photo-container" style="text-align:center;">
-                    <img src="gallery3/1.jpg" alt="JOTA-JOTI 2025 Photo" style="max-width:90%;height:auto;">
+                <div class="slideshow-container" id="slideshow-container3">
+                    <!-- Gallery 3 images will appear here -->
                 </div>
             </div>
         </section>
