@@ -143,6 +143,48 @@ function showSlides3() {
     setTimeout(showSlides3, 4000);
 }
 showSlides3();
+
+// Gallery 4 (2025 Christmas Party) images array
+const images4 = [
+    "1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png",
+    "10.png","11.png","12.png", "13.png","14.png","15.png","16.png","17.png","18.png",
+    "19.png"
+];
+
+// Shuffle Gallery 4 images
+function shuffle4(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+shuffle4(images4);
+
+// Dynamically create slides for Gallery 4
+const slideshowContainer4 = document.getElementById("slideshow-container4");
+images4.forEach((img, idx) => {
+    const slideDiv = document.createElement("div");
+    slideDiv.className = "mySlides4 fade";
+    const image = document.createElement("img");
+    image.src = "gallery4/" + img;
+    image.style.width = idx === 0 ? "80%" : "100%";
+    slideDiv.appendChild(image);
+    slideshowContainer4.appendChild(slideDiv);
+});
+
+// Slideshow logic for Gallery 4
+let slideIndex4 = 0;
+function showSlides4() {
+    let slides4 = document.getElementsByClassName("mySlides4");
+    for (let i = 0; i < slides4.length; i++) {
+        slides4[i].style.display = "none";
+    }
+    slideIndex4++;
+    if (slideIndex4 > slides4.length) {slideIndex4 = 1}
+    slides4[slideIndex4-1].style.display = "block";
+    setTimeout(showSlides4, 4000);
+}
+showSlides4();
 };
 </script>
 
@@ -342,6 +384,28 @@ showSlides3();
                 </div>
                 <div class="slideshow-container" id="slideshow-container3">
                     <!-- Gallery 3 images will appear here -->
+                </div>
+            </div>
+        </section>
+
+        <div class="logo-divider">
+            <img src="DX1ARC_logo.png" alt="DX1ARC Logo"> 
+            <img src="DX1ARC_logo.png" alt="DX1ARC Logo">
+            <img src="DX1ARC_logo.png" alt="DX1ARC Logo">
+            <img src="DX1ARC_logo.png" alt="DX1ARC Logo">
+            <img src="DX1ARC_logo.png" alt="DX1ARC Logo">
+        </div>
+
+        <!-- 2025 Christmas Party Gallery Segment -->
+        <section id="christmas-party" class="section">
+            <div class="container">
+                <div class="gallery-header">
+                    <img src="camera.gif" alt="Camera Icon" class="gallery-icon">
+                    <h2>2025 Christmas Party</h2>
+                    <img src="camera.gif" alt="Camera Icon" class="gallery-icon">
+                </div>
+                <div class="slideshow-container" id="slideshow-container4">
+                    <!-- Gallery 4 images will appear here -->
                 </div>
             </div>
         </section>
