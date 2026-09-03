@@ -152,7 +152,7 @@ footer {
     }
 
     .mySlides img {
-        max-height: 300px; /* Adjust the maximum height for smaller screens */
+        max-height: none; /* Removed the previous 300px limit for smaller screens */
     }
 }
 
@@ -198,7 +198,8 @@ a:hover {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 1000px;
+    width: 95vw;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -209,10 +210,10 @@ a:hover {
 
 /* Image styles */
 .mySlides img {
-    width: 100%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 500px; /* Set a maximum height */
-    object-fit: cover; /* Ensure the image covers the container */
+    width: 100%; 
+    height: 95vh; 
+    max-height: none; 
+    object-fit: contain; 
 }
 
 /* Fading animation */
@@ -363,12 +364,13 @@ a:hover {
     margin: 0;
 }
 
+/* Updated Gallery Photo Sizes */
 .slideshow-container img,
 #slideshow-container img,
 #slideshow-container2 img {
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
+    width: 100%;
+    height: 95vh;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
 }
