@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: url('bg.png'); /* Modern gradient */
+    background: url('designs/bg.png'); /* Modern gradient */
     color: #f4f4f4; /* Ensure text color is white */
     background-size: cover; /* Cover the entire background */
     min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
@@ -78,7 +78,7 @@ nav ul li a:hover {
 }
 
 .main-content {
-    background: url('bg.png') no-repeat center center fixed;
+    background: url('designs/bg.png') no-repeat center center fixed;
     background-size: cover;
     padding-top: 20px;
     color: #f4f4f4; /* Ensure text color is white */
